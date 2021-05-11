@@ -6,21 +6,21 @@
 			$index; $side_index; $size;
 			$Top = 1; $Bottom = 1; $Diagonal = $N - 1;
 			for ($index = 0; $index < $N; $index++)
-				echo "*" . " ";
+				echo "*" . "&nbsp;";
 
-			echo "\n";
+			echo "<br>";
 			for ($index = 1; $index < $N - 1; $index++)
 			{
 				for ($side_index = 0;
 					$side_index < 2 * ($N - $index - 1);
 					$side_index++)
-					echo " ";
+					echo "&nbsp;";
 				echo "*";
 
-				echo "\n";
+				echo "<br>";
 			}
 			for ($index = 0; $index < $N; $index++)
-				echo "*" . " ";
+				echo "*" . "&nbsp;";
 		}
 
 		function patternY($height){
@@ -32,9 +32,9 @@
 							&& $i <= $height / 2)
 						echo "*";
 					else
-						echo " ";
+						echo "&nbsp;";
 				}
-				echo "\n";
+				echo "<br>";
 				if ($i < $height / 2)
 					$counter++;
 			}
@@ -49,10 +49,10 @@
 						|| $j == $height - $counter)
 						echo "*";
 					else
-						echo " ";
+						echo "&nbsp;";
 				}
 				$counter++;
-				echo "\n";
+				echo "<br>";
 			}
 		}
 
@@ -71,9 +71,9 @@
 		                echo "*";
 		                 
 		            else
-		                echo " ";
+		                echo "&nbsp;";
 		        }
-		        echo "\n";
+		        echo "<br>";
 		    }
 		}
 
@@ -83,7 +83,7 @@
 			patternY($_POST['number']);
 		} else if($_POST['letter'] == 'X'){
 			patternX($_POST['number']);
-		} else if($_POST['letter'] == 'X'){
+		} else if($_POST['letter'] == 'O'){
 			patternO($_POST['number']);
 		}
 	}
